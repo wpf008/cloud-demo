@@ -1,0 +1,12 @@
+server:
+  port: 8761 #第一台集群的端口
+eureka:
+  instance:
+    hostname: eureka1 #第一台集群的主机名
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://eureka2:8770/eureka/,http://eureka3:8771/eureka/ #设置与Eureka Server交互的地址查询服务和注册服务都需要依赖这个地址。
+
+

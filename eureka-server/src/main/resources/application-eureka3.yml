@@ -1,0 +1,12 @@
+server:
+  port: 8771
+eureka:
+  instance:
+    hostname: eureka3
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://eureka2:8770/eureka/,http://eureka1:8761/eureka/
+
+
